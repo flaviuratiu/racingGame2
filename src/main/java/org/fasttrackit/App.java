@@ -33,5 +33,7 @@ public class App {
         System.out.println(firstEngine.manufacturer);
         System.out.println(firstCompetitor.engine.manufacturer);
 
+        double traveledDistance =
+                firstCompetitor.accelerate(100, 30);
     }
 }
