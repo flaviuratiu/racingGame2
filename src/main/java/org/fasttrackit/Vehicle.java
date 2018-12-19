@@ -2,10 +2,10 @@ package org.fasttrackit;
 
 public class Vehicle {
 
-    String name;
-    String color;
-    double mileage;
-    long totalKm;
+    private String name;
+    private String color;
+    private double mileage;
+    private long totalKm;
 
     public double accelerate(double speed, double durationInHours) {
         System.out.println(name + " accelerated with " + speed +
@@ -16,4 +16,35 @@ public class Vehicle {
         return distance;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name.trim();
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public double getMileage() {
+        return mileage;
+    }
+
+    public void setMileage(double mileage) {
+        this.mileage = mileage;
+    }
+
+    public long getTotalKm() {
+        return totalKm;
+    }
+
+    public void setTotalKm(long totalKm) {
+        this.totalKm = totalKm;
+    }
 }
