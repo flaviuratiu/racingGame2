@@ -16,6 +16,11 @@ public class Vehicle {
         return distance;
     }
 
+    // method used just to demonstrate co-variant return types
+    public Vehicle returnSomeVehicle() {
+        return this;
+    }
+
     // method overloading
     public double accelerate(double speed) {
          return accelerate(speed,1);
