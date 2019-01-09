@@ -9,18 +9,27 @@ import org.fasttrackit.cheater.CheatingCar;
 // this is a comment
 public class App {
     public static void main(String[] args) {
+        // polymorphism - an object can take multiple forms
+        Vehicle cheatingCar = new CheatingCar();
+        // implementation of accelerate method from CheatingCar will be used
+        cheatingCar.accelerate(10, 2);
+
+        // type casting
+        ((CheatingCar) cheatingCar).testMethod();
 
 
-        Engine firstEngine = new Engine();
-        firstEngine.manufacturer = "Renault";
-
-        System.out.println(firstEngine);
-
-        CheatingCar cheatingCompetitor= new CheatingCar();
-        cheatingCompetitor.setName("Test1");
-        double distance = cheatingCompetitor.accelerate(70);
-
-        System.out.println("Cheating parcurge distanta de " + distance);
+//
+//
+//        Engine firstEngine = new Engine();
+//        firstEngine.manufacturer = "Renault";
+//
+//        System.out.println(firstEngine);
+//
+//        CheatingCar cheatingCompetitor= new CheatingCar();
+//        cheatingCompetitor.setName("Test1");
+//        double distance = cheatingCompetitor.accelerate(70);
+//
+//        System.out.println("Cheating parcurge distanta de " + distance);
 
 //        new AutoVehicle().accelerate(100);
 //
