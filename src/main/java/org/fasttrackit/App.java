@@ -8,8 +8,11 @@ package org.fasttrackit;
 public class App {
     public static void main(String[] args) {
 
+
         Engine firstEngine = new Engine();
         firstEngine.manufacturer = "Renault";
+
+        new AutoVehicle().accelerate(100);
 
         // sout prints a message to the console
         System.out.println(firstEngine.manufacturer);
