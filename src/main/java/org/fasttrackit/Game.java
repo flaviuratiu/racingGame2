@@ -10,7 +10,20 @@ public class Game {
 
     public void displayAvailableTracks() {
         System.out.println("Available tracks:");
-        System.out.println(tracks[0]);
-        System.out.println(tracks[1]);
+
+        // (classic) for loop
+//        for (int i = 0; i < tracks.length; i++) {
+//            if (tracks[i] != null) {
+//                System.out.println(tracks[i].getName());
+//            }
+//        }
+
+        // enhanced for loop (for-each)
+        for (Track track : tracks) {
+            if (track != null) {
+                System.out.println(track.getName());
+            }
+        }
+
     }
 }
