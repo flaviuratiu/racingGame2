@@ -1,7 +1,5 @@
 package org.fasttrackit;
 
-import org.fasttrackit.cheater.CheatingCar;
-
 /**
  * Hello world!
  */
@@ -9,13 +7,18 @@ import org.fasttrackit.cheater.CheatingCar;
 // this is a comment
 public class App {
     public static void main(String[] args) {
-        // polymorphism - an object can take multiple forms
-        Vehicle cheatingCar = new CheatingCar();
-        // implementation of accelerate method from CheatingCar will be used
-        cheatingCar.accelerate(10, 2);
+        // modulo operator
+        System.out.println(4 % 2);
+        System.out.println(4 % 3);
 
-        // type casting
-        ((CheatingCar) cheatingCar).testMethod();
+
+//        // polymorphism - an object can take multiple forms
+//        Vehicle cheatingCar = new CheatingCar();
+//        // implementation of accelerate method from CheatingCar will be used
+//        cheatingCar.accelerate(10, 2);
+//
+//        // type casting
+//        ((CheatingCar) cheatingCar).testMethod();
 
 
 //
