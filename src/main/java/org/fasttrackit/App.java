@@ -7,9 +7,17 @@ package org.fasttrackit;
 // this is a comment
 public class App {
     public static void main(String[] args) {
-        // modulo operator
-        System.out.println(4 % 2);
-        System.out.println(4 % 3);
+        Game game = new Game();
+
+        game.addTrack(0, new Track("Highway", 300));
+        game.addTrack(1, new Track("Seaside", 100));
+
+        game.displayAvailableTracks();
+
+
+//        // modulo operator
+//        System.out.println(4 % 2);
+//        System.out.println(4 % 3);
 
 
 //        // polymorphism - an object can take multiple forms
