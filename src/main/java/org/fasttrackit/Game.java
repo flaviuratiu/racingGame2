@@ -2,6 +2,7 @@ package org.fasttrackit;
 
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
@@ -11,20 +12,28 @@ public class Game {
     private Track[] tracks = new Track[10];
     private List<Vehicle> competitors = new ArrayList<>();
 
-    public void start() {
+    public void start() throws Exception {
         addCompetitors(2);
         displayCompetitors();
         addTrack(0, new Track("Highway", 300));
         addTrack(1, new Track("Seaside", 100));
         displayAvailableTracks();
 
-        Track track;
+        int trackNumber = getTrackNumberFromUser();
+        Track track = tracks[trackNumber - 1];
+        System.out.println("Chosen track: " + track.getName());
+    }
 
-        // let the user choose what track to use (the 1st one or the 2nd one)
-        // based on their choice, populate the local variable "track" above
-        // with the reference of the correct object from the "tracks" array
-
-
+    private int getTrackNumberFromUser() throws Exception {
+        System.out.println("Please choose one of the available tracks:");
+        Scanner scanner = new Scanner(System.in);
+        try {
+            return scanner.nextInt();
+        } catch (InputMismatchException exception) {
+//            throw new Exception("Expected an integer number.");
+            System.out.println("Expected an integer number.");
+            return getTrackNumberFromUser();
+        }
     }
 
     public void addCompetitors(int competitorCount) {
