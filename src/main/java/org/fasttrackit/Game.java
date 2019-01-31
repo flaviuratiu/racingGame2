@@ -22,6 +22,26 @@ public class Game {
         int trackNumber = getTrackNumberFromUser();
         Track track = tracks[trackNumber - 1];
         System.out.println("Chosen track: " + track.getName());
+
+        boolean noWinnerYet = true;
+        int competitorsWithoutFuel = 0;
+
+        while (noWinnerYet && competitorsWithoutFuel < competitors.size()) {
+            for (Vehicle vehicle : competitors) {
+                double speed = getVehicleAccelerationSpeedFromUser();
+                vehicle.accelerate(speed);
+
+                if (vehicle.getFuelLevel() <= 0) {
+                    competitorsWithoutFuel++;
+                }
+
+                if (vehicle.getTotalKm() >= track.getLength()) {
+                    noWinnerYet = false;
+                    System.out.println("Congrats! The winner is: " + vehicle.getName());
+                    break;
+                }
+            }
+        }
     }
 
     private int getTrackNumberFromUser() throws Exception {
